@@ -67,7 +67,3 @@ Contributions to this library are welcome! If you have any ideas for improvement
 ## License <a name="license"></a>
 
 This library is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
----
-
-**Note:** This README is a template, and you should replace the placeholder text with actual information about your library, including installation instructions, usage examples, and licensing details.
