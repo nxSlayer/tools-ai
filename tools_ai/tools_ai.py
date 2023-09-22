@@ -35,6 +35,21 @@ class AI:
                                  "user_id": userid
                              }).json()['id_']
     return {'token': token, 'chat_id': new_chat}
+    
+  def generate_prompt(self, content):
+    uri = "wss://doevent-stable-diffusion-prompt-generator.hf.space/queue/join"
+    session_hash = "vvx2rpdvals"
+    ws = websocket.WebSocket()
+    ws.connect(uri)
+    ws.send(json.dumps({"session_hash": session_hash, "fn_index": 1}))
+    ws.recv()
+    ws.send(json.dumps({"fn_index": 0,"data": [content],"event_data": None,"session_hash": session_hash}))
+
+    while True:
+      rs = ws.recv()
+      if "process_completed" in str(rs):
+        output = json.loads(rs)['output']['data'][0]
+        return output
 
   def send_message(self, content):
   

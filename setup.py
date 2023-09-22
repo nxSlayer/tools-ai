@@ -13,7 +13,7 @@ setup(
     name="tools_ai",
     license="MIT",
     author="nxSlayer",
-    version="1.1.0",
+    version="1.2.0",
     author_email="princediscordslay@gmail.com",
     description="Library for ai tools",
     url="https://github.com/nxSlayer/tools_ai",

@@ -10,5 +10,5 @@ from json import loads
 
 __newest__ = loads(get("https://pypi.org/pypi/tools_ai/json").text)["info"]["version"]
 
-if '1.1.0' != __newest__:
+if '1.2.0' != __newest__:
     print(f"(tools_AI) There is a new version, please update for better results")
